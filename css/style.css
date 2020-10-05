@@ -122,14 +122,7 @@ img {
     color: var(--accent-text-color);
 }
 
-.address-list {
-    display: flex;
-}
-
-.address-list-item:not(:last-child) {
-    margin-right: 50px;
-}
-
+/* --links of menu-- */
 .navigation-list-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -146,7 +139,15 @@ img {
     font-size: 14px;
     line-height: 1.143;
     letter-spacing: 0.02em;
+}
+
+.navigation-list-link {
     color: var(--title-color-white-them);
+}
+
+/* --links of mail and tel-- */
+.address-link-item {
+    color: var(--text-color);
 }
 
 .navigation-list-link:hover,
@@ -154,10 +155,28 @@ img {
 .address-link-item:hover,
 .address-link-item:focus {
     color: var(--accent-text-color);
+    --color1: var(--accent-text-color);
 }
 
 .navigation-list-link.active {
     color: var(--accent-text-color);
+}
+
+.address-list {
+    display: flex;
+}
+
+.address-list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.adress-icon {
+    margin-right: 10px;
+}
+
+.address-link-item {
+    display: flex;
+    align-items: center;
 }
 
 /* END HEADER */
@@ -185,7 +204,11 @@ img {
 }
 
 .main-section {
-    background-color: #2F303A;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), 
+    url(../imeges/hero/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-btn {
@@ -203,6 +226,7 @@ img {
     color: var(--text-btn-dark-theme);
     background: #2196F3;
     border-radius: 4px;
+    border-style: none;
 }
 
 .hero-btn:hover,
@@ -227,11 +251,62 @@ img {
 
 .adventages-list-item {
     width: calc((100%-90px) / 4);
-    
 }
 
 .adventages-list-item:not(:last-child) {
     margin-right: 30px;
+}
+
+.adventages-list-item:first-child::before {
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color:#F5F4FA;
+    background-image: url(../imeges/our-advantages/antenna.svg);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adventages-list-item:nth-child(2)::before {
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color:#F5F4FA;
+    background-image: url(../imeges/our-advantages/clock.svg);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adventages-list-item:nth-child(3)::before {
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color:#F5F4FA;
+background-image: url(../imeges/our-advantages/diagram.svg);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adventages-list-item:last-child::before {
+    display: block;
+    content: "";
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color:#F5F4FA;
+    background-image: url(../imeges/our-advantages/astronaut.svg);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .adventages-subtitle {
@@ -300,7 +375,7 @@ img {
 }
 
 .our-team-discription {
-    padding: 30px 15px;
+    padding: 30px 32px;
 
     background-color: #FFFFFF;
     text-align: center;
@@ -320,9 +395,67 @@ img {
     font-size: 16px;
     line-height: 1.188;
     letter-spacing: 0.03em;
+
+    margin-bottom: 16px;
+}
+
+.our-team-section .icon-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-list .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.icon-list .icon-link:hover,
+.icon-list .icon-link:focus {
+    background-color: var(--accent-text-color);
+    --color2: var(--text-btn-dark-theme);
 }
 
 /* END OUR TEAM SECTION */
+
+/* REGULAR CLIENTS */
+
+.clients .container {
+    padding: 94px 15px;
+}
+
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+
+    border: 1px solid #AFB1B8;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border:1px solid var(--accent-text-color);
+    --color2: var(--accent-text-color);
+}
+
+/* END REGULAR CLIENTS */
 
 /* PORTFOLIO SECTION */
 
@@ -420,8 +553,14 @@ img {
 /* FOOTER */
 
 .footer .container {
+    display: flex;
+    align-items: center;
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer .contacts {
+    margin-right: 70px;
 }
 
 .logo.logo-dark-theme {
@@ -466,5 +605,41 @@ img {
 .footer-list-tel:focus {
     color: var(--accent-text-color);
 }
+
+.footer-subtitle {
+    margin-bottom: 20px;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-color-dark-theme);
+}
+
+.social-list-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-item .icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0.1);
+    --color2: var(--text-btn-dark-theme);
+
+}
+
+.social-item .icon-link:hover,
+.social-item .icon-link:focus {
+    background-color: var(--accent-text-color);
 
 /* END FOOTER */
