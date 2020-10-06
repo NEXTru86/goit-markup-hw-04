@@ -454,32 +454,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     border-radius: 4px;
 }
 
-.clients-list-svg:first-child {
-    width: 44px;
-    height: 48px;
-}
-
-.clients-list-svg:nth-child(2) {
-    width: 40px;
-    height: 52px;
-}
-
-.clients-list-svg:nth-child(3) {
-    width: 40px;
-    height: 42px;
-}
-
-.clients-list-svg:nth-child(4) {
-    width: 80px;
-    height: 42px;
-}
-
-.clients-list-svg:nth-child(5) {
-    width: 60px;
-    height: 48px;
-}
-
-.clients-list-svg:last-child {
+.clients-list-svg {
     width: 88px;
     height: 46px;
 }
