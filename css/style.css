@@ -239,7 +239,7 @@ img {
 
 /* OUR ADVENTAGES SECTION*/
 
-.our-adventages-section.container {
+.our-adventages-section .container {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -330,7 +330,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 
 /* WHAT ARE WE DOING SECTION */
 
-.what-are-we-doing-section.container {
+.what-are-we-doing-section .container {
     padding-bottom: 94px;
 }
 
@@ -414,6 +414,11 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     background-color: #FFFFFF;
 }
 
+.social-list-svg {
+    width: 20px;
+    height: 20px;
+}
+
 .icon-list .icon-link:hover,
 .icon-list .icon-link:focus {
     background-color: var(--accent-text-color);
@@ -447,6 +452,36 @@ background-image: url(../imeges/our-advantages/diagram.svg);
     border: 1px solid #AFB1B8;
     box-sizing: border-box;
     border-radius: 4px;
+}
+
+.clients-list-svg:first-child {
+    width: 44px;
+    height: 48px;
+}
+
+.clients-list-svg:nth-child(2) {
+    width: 40px;
+    height: 52px;
+}
+
+.clients-list-svg:nth-child(3) {
+    width: 40px;
+    height: 42px;
+}
+
+.clients-list-svg:nth-child(4) {
+    width: 80px;
+    height: 42px;
+}
+
+.clients-list-svg:nth-child(5) {
+    width: 60px;
+    height: 48px;
+}
+
+.clients-list-svg:last-child {
+    width: 88px;
+    height: 46px;
 }
 
 .clients-link:hover,
@@ -493,6 +528,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 .portfolio-filter-btn:focus {
     color: var(--active-text-btn-white-theme);
     background-color: #2196F3;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .projects-list {
@@ -514,6 +550,11 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 
 .project-item-link {
     display: block;
+}
+
+.project-item-link:hover,
+.project-item-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-content {
@@ -554,7 +595,7 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 
 .footer .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 60px;
     padding-bottom: 60px;
 }
@@ -604,6 +645,10 @@ background-image: url(../imeges/our-advantages/diagram.svg);
 .footer-list-tel:hover,
 .footer-list-tel:focus {
     color: var(--accent-text-color);
+}
+
+.social-list {
+    padding-top: 12px;
 }
 
 .footer-subtitle {
